@@ -1,0 +1,15 @@
+@use "../common.scss" as common;
+
+$size: 50%;
+$width-height:19rem;
+
+.profile-page {
+    @include common.flex(flex, row);
+    .profile-image {
+        @include common.background-image($size, $size, no-repeat, $width-height, $width-height);
+    }
+    .profile-info {
+        @include common.flex(flex, column, none, flex-start);
+        gap: 1rem;
+    }
+}

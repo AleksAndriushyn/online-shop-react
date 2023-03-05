@@ -1,0 +1,56 @@
+@use "../common.scss" as common;
+
+$width: 62.5rem;
+$margin-option: 3px;
+$font-size: 24px;
+$height: 25rem;
+$button-size: 2.5rem;
+$gap: 1rem;
+
+.swiper {
+    width: $width;
+
+    .swiper-slide {
+        @include common.background-image(auto, ($width $height), no-repeat, $width, $height);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #000000;
+        background-color: #f5f5f5;
+        border-radius: $button-size;
+        width: $button-size;
+        height: $button-size;
+        font-size: 10px;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: $font-size;
+    }
+
+    .swiper-button-prev::after {
+        margin-right: $margin-option;
+    }
+
+    .swiper-button-next::after {
+        margin-left: $margin-option;
+    }
+}
+
+.actions {
+    @include common.flex(flex, column);
+    margin-top: $gap;
+    gap: $gap;
+    font-size: 20px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:hover {
+        transition: 0.3s ease all;
+        font-size: $font-size;
+    }
+}

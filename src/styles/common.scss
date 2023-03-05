@@ -1,0 +1,20 @@
+@mixin flex($display: flex, $flex-direction: row, $justify-content: center, $align-items: center) {
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin background-image(
+    $background-position,
+    $background-size,
+    $background-repeat: no-repeat,
+    $width: 100%,
+    $height: 100%
+) {
+    background-position: $background-position !important;
+    background-size: $background-size !important;
+    background-repeat: $background-repeat !important;
+    width: $width !important;
+    height: $height !important;
+}

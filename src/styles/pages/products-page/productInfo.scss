@@ -1,0 +1,23 @@
+@use "../../common.scss" as common;
+
+.card {
+    cursor: pointer;
+    .MuiCardHeader-title {
+        width: 20rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .product-image {
+        @include common.background-image(50%, 50%, no-repeat, auto, 300px);
+    }
+
+    .product-info {
+        @include common.flex(flex, row, space-between);
+    }
+    .product-footer {
+        @include common.flex(flex);
+        gap: 5px;
+    }
+}

@@ -1,0 +1,41 @@
+@use "../../common.scss" as common;
+
+$margin-top: 3rem;
+$gap: 1rem;
+
+.product-page {
+    @include common.flex(flex, column, none, none);
+
+    .title {
+        @include common.flex(flex, column, none, flex-start);
+        margin-left: 3rem;
+
+        .rate {
+            @include common.flex(flex, row, none, center);
+            gap: $gap;
+            margin-bottom: $gap;
+        }
+    }
+    .content {
+        @include common.flex(flex, row, none, none);
+    }
+    .price {
+        @include common.flex(flex, row, none, center);
+        height: 3rem;
+        margin-top: $margin-top;
+        gap: $gap;
+    }
+    .description-block {
+        @include common.flex(flex, column, none, none);
+        text-align: start;
+        gap: $gap;
+        margin-top: $margin-top;
+    }
+    .description {
+        width: 50rem;
+    }
+}
+
+.image {
+    @include common.background-image(50%, 40%, no-repeat, 50%, 38rem);
+}

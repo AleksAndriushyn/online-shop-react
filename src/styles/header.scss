@@ -1,0 +1,22 @@
+@use "./common.scss" as common;
+
+$width:100%;
+$color:white;
+
+.header {
+    background-color: #212529;
+    position: fixed;
+    width: $width;
+    top: 0;
+    z-index: 2;
+
+    .user-block {
+        @include common.flex(flex, row, flex-end);
+        width: $width;
+        gap: 15px;
+        color: $color;
+        .cart-icon {
+            cursor: pointer;
+        }
+    }
+}
