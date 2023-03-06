@@ -2,27 +2,26 @@
 
 .menu {
     @include common.flex(flex, column, none, center);
-    width: 10rem;
-}
 
-.category-list {
-    @include common.flex(flex, column, none, none);
-    gap: 5px;
+    .category-list {
+        @include common.flex(flex, column, center, center);
+        gap: 5px;
 
-    .subheader {
-        color: black;
-        font-size: 16px;
-    }
+        .subheader {
+            color: black;
+            font-size: 16px;
+        }
 
-    .category {
-        border-radius: 4px;
-        cursor: pointer;
-        @include common.flex(flex, row, center);
-    }
+        .category {
+            border-radius: 4px;
+            cursor: pointer;
+            @include common.flex(flex, row, center);
+        }
 
-    .category:hover {
-        background: green;
-        color: white;
-        transition: 0.3s ease all;
+        .category:hover {
+            background: green;
+            color: white;
+            transition: 0.3s ease all;
+        }
     }
 }

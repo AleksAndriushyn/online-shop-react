@@ -18,6 +18,10 @@ $gap: 1rem;
     }
     .content {
         @include common.flex(flex, row, none, none);
+
+        .image {
+            @include common.background-image(50%, 40%, no-repeat, 50%, 38rem);
+        }
     }
     .price {
         @include common.flex(flex, row, none, center);
@@ -34,8 +38,4 @@ $gap: 1rem;
     .description {
         width: 50rem;
     }
-}
-
-.image {
-    @include common.background-image(50%, 40%, no-repeat, 50%, 38rem);
 }

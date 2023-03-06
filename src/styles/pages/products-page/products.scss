@@ -2,6 +2,7 @@
 
 .product-container {
     @include common.flex(flex, column);
+
     .product-content {
         @include common.flex(flex, row, center, none);
         .price-block {
@@ -11,9 +12,10 @@
                 width: 13rem;
             }
         }
+
         .product-list {
             display: grid;
-            grid-template-columns: repeat(4, 23rem);
+            grid-template-columns: repeat(4, 21rem);
         }
     }
 }
